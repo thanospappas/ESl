@@ -80,7 +80,8 @@ def main():
             gCreator.computeAll()
 
         elif reply == 4:
-            p = Predictor("/home/thanos/graphs/epinions")
+            inputReddit = str(raw_input('Path for redditGraph:'))#"/home/thanos/graphs/epinions"
+            p = Predictor(inputReddit)
             p.readData(True)
             p.train()
             p.predict()
