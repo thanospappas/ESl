@@ -77,7 +77,12 @@ def main():
             gCreator.readEpinions(inputEpinions)
             gCreator.readSlashDot(inputSlashdot)
             gCreator.readWiki(inputWiki)
-            gCreator.computeAll()
+            fEpinions = str(raw_input('Output Features Path Epinions:'))#/home/thanos/PycharmProjects/ESl/datasets/soc-sign-epinions.txt
+            fSlashdot = str(raw_input('Output Features Path Slashdot:'))#/home/thanos/PycharmProjects/ESl/datasets/soc-sign-Slashdot090221.txt
+            fWiki = str(raw_input('Output Features Path Wiki:'))
+            gCreator.computeFeatures(fEpinions)
+            gCreator.computeFeatures(fSlashdot)
+            gCreator.computeFeatures(fWiki)
 
         elif reply == 4:
             inputReddit = str(raw_input('Path for redditGraph:'))#"/home/thanos/graphs/epinions"
@@ -90,7 +95,7 @@ def main():
             break
 
 if __name__ == '__main__':     # if the function is the main function ...
-    main()# ...call it
+    main()
 
 
 

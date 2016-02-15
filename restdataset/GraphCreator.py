@@ -249,16 +249,3 @@ class GraphCreator:
 
     def writeWiki(self):
         pass
-
-
-    def computeAll(self):
-        self.computeFeatures(self.epinionsGraph,"/home/thanos/graphs/epinions")
-        self.computeFeatures(self.slashdotGraph,"/home/thanos/graphs/slashdot")
-        self.computeFeatures(self.wikiGraph,"/home/thanos/graphs/wiki")
-
-if __name__ == '__main__':     # if the function is the main function ...
-    gCreator = GraphCreator()
-    gCreator.readEpinions("/home/thanos/PycharmProjects/ESl/datasets/soc-sign-epinions.txt")
-    gCreator.readSlashDot("/home/thanos/PycharmProjects/ESl/datasets/soc-sign-Slashdot090221.txt")
-    gCreator.readWiki("/home/thanos/PycharmProjects/ESl/datasets/rfa_all.NL-SEPARATED.txt")
-    gCreator.computeAll()
