@@ -14,14 +14,6 @@ class Parser:
         self.filePath = filePath
 
     def parseFiles(self):
-        """for dirname, dirnames, filenames in os.walk("/home/thanos/PycharmProjects/ESl/reddit/"):
-            for subdirname in dirnames:
-                print(os.path.join(dirname, subdirname))
-            for filename in filenames:
-                filepath = os.path.join(dirname, filename)
-                #print(filepath)
-                self.parseSingleFile(filepath)"""
-
         for dirname, dirnames, filenames in os.walk(self.filePath):
             filepaths = []
             for subdirname in dirnames:
